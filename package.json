@@ -8,11 +8,7 @@
     "antigravity-claude-proxy": "bin/cli.js",
     "acc": "bin/cli.js"
   },
-  "files": [
-    "src",
-    "bin",
-    "public"
-  ],
+  "files": ["src", "bin", "public"],
   "scripts": {
     "build:css": "tailwindcss -i ./public/css/src/input.css -o ./public/css/style.css --minify",
     "watch:css": "tailwindcss -i ./public/css/src/input.css -o ./public/css/style.css --watch",
@@ -28,37 +24,12 @@
     "test": "node tests/run-all.cjs",
     "test:signatures": "node tests/test-thinking-signatures.cjs",
     "test:multiturn": "node tests/test-multiturn-thinking-tools.cjs",
-    "test:streaming": "node tests/test-multiturn-thinking-tools-streaming.cjs",
-    "test:interleaved": "node tests/test-interleaved-thinking.cjs",
-    "test:images": "node tests/test-images.cjs",
-    "test:caching": "node tests/test-caching-streaming.cjs",
-    "test:crossmodel": "node tests/test-cross-model-thinking.cjs",
-    "test:oauth": "node tests/test-oauth-no-browser.cjs",
-    "test:emptyretry": "node tests/test-empty-response-retry.cjs",
-    "test:sanitizer": "node tests/test-schema-sanitizer.cjs",
     "test:strategies": "node tests/test-strategies.cjs",
-    "test:cache-control": "node tests/test-cache-control.cjs"
+    "test:schema": "node tests/test-schema-sanitizer.cjs"
   },
-  "keywords": [
-    "claude",
-    "anthropic",
-    "antigravity",
-    "proxy",
-    "vertex-ai"
-  ],
-  "author": "Badri Narayanan",
+  "keywords": ["claude", "anthropic", "proxy", "antigravity", "gemini"],
+  "author": "Badri Narayanan S",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/badri-s2001/antigravity-claude-proxy.git"
-  },
-  "homepage": "https://github.com/badri-s2001/antigravity-claude-proxy#readme",
-  "bugs": {
-    "url": "https://github.com/badri-s2001/antigravity-claude-proxy/issues"
-  },
-  "engines": {
-    "node": ">=18.0.0"
-  },
   "dependencies": {
     "async-mutex": "^0.5.0",
     "better-sqlite3": "^12.5.0",
@@ -73,6 +44,8 @@
     "daisyui": "^4.12.14",
     "postcss": "^8.4.32",
     "tailwindcss": "^3.4.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }
-
